@@ -1,5 +1,5 @@
 from pathlib import Path
-from constants import SUPPORTED_FILE_TYPES
+from .constants import SUPPORTED_FILE_TYPES
 
 def get_files(path:Path) -> list[Path]:
         # Check if the path is a directory

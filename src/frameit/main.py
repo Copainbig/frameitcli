@@ -1,8 +1,8 @@
 import argparse
 import webcolors
 from pathlib import Path
-from framing_orchestartor import orchestrate_framing
-from constants import DEFAULT_DEST_DIR
+from .framing_orchestrator import orchestrate_framing
+from .constants import DEFAULT_DEST_DIR
 
 def _getParsedArguments():
     parser = argparse.ArgumentParser(
