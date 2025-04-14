@@ -1,8 +1,9 @@
 import argparse
 import webcolors
 from pathlib import Path
-from .framing_orchestrator import orchestrate_framing
-from .constants import DEFAULT_DEST_DIR
+from multiprocessing import freeze_support  # <-- important
+from frameit.framing_orchestrator import orchestrate_framing
+from frameit.constants import DEFAULT_DEST_DIR
 
 def _getParsedArguments():
     parser = argparse.ArgumentParser(
@@ -69,7 +70,7 @@ def _validate_arguments(args:argparse.Namespace) -> None:
     if args.destination and not destination_path.parent.exists():
         raise FileNotFoundError(f"Destination '{args.destination}' doesn't have a valid parent directory.")
     
-if __name__ == "__main__":
+def main():
     args = _getParsedArguments()
     try:
         _validate_arguments(args)
@@ -80,3 +81,7 @@ if __name__ == "__main__":
     margin = float(args.margin) if isinstance(args.margin, int) else args.margin
     destination = Path(args.destination)
     orchestrate_framing(path, color, margin, destination)
+
+if __name__ == "__main__":
+    freeze_support()
+    main()

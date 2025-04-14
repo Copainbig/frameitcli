@@ -1,6 +1,6 @@
 from pathlib import Path
-from .file_explorer import get_files
-from .picture_framer_utils import frame_picture_file
+from frameit.file_explorer import get_files
+from frameit.picture_framer_utils import frame_picture_file
 from typing import Tuple
 from tqdm import tqdm
 
