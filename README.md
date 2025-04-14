@@ -12,7 +12,7 @@ poetry run pytest --cov=frameit --cov-report=term-missing
 
 Create executable :
 ```
-poetry run pyinstaller --onefile src/frameit/main.py \                
+poetry run pyinstaller --onefile src/frameit/main.py \
   --name frameit-cli \
   --hidden-import=multiprocessing \
   --hidden-import=zlib \
