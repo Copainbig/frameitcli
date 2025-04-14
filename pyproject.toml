@@ -8,6 +8,9 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "webcolors (>=24.11.1,<25.0.0)",
+    "pillow (>=11.2.1,<12.0.0)",
+    "tqdm (>=4.67.1,<5.0.0)"
 ]
 
 [tool.poetry]
