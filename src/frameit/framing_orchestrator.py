@@ -44,6 +44,3 @@ def orchestrate_framing(
     print("---------------------------------------------")
     print(f">>> Framing process completed for {target_path}")
     print(f">>> Framed images saved to {destination_dir}")
-
-    print(f">>> Framing process completed for {target_path}")
-    print(f">>> Framed images saved to {destination_dir}")
