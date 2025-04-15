@@ -2,7 +2,7 @@
 
 Usage :
 ```
-poetry run python3 -m frameit.main ~/Desktop/synced/photos/merlimont_2023_exports -r
+poetry run python3 -m frameit.cli ~/Desktop/synced/photos/merlimont_2023_exports -r
 ```
 
 Test : 
@@ -12,7 +12,7 @@ poetry run pytest --cov=frameit --cov-report=term-missing
 
 Create executable :
 ```
-poetry run pyinstaller --onefile src/frameit/main.py \
+poetry run pyinstaller --onefile src/frameit/cli.py \
   --name frameit-cli \
   --hidden-import=multiprocessing \
   --hidden-import=zlib \
